@@ -1,10 +1,10 @@
 date|time|description|vendor|amount
-2024-05-19|10:35:46|gaming chair|Ebay|+40.00
-2024-06-20|11:27:11|bluetooth headphones|Best Buy|-27.36
+2026-11-19|10:35:46|gaming chair|Ebay|+40.00
+2025-06-20|11:27:11|bluetooth headphones|Best Buy|-27.36
 2025-06-30|12:35:23|100yds red ribbon|Blick|-30.00
 2025-03-13|13:12:44|2 crunchwraps|Taco Bell|-15.00
-2024-07-26|19:23:43|cargo pants|H&M|-25.30
+2026-07-26|19:23:43|cargo pants|H&M|-25.30
 2025-01-15|17:11:50|black dresser|IKEA|-45.00
-2024-08-27|15:45:12|paper towels|The Fresh Grocer|-12.50
-2024-09-07|14:36:14|Friends & Family|Jah|+50.00
-2024-10-04|12:57:12|3 4in usb cords|Amazon|-23.00
+2026-08-27|15:45:12|paper towels|The Fresh Grocer|-12.50
+2026-09-07|14:36:14|Friends & Family|Jah|+50.00
+2026-10-04|12:57:12|3 4in usb cords|Amazon|-23.00

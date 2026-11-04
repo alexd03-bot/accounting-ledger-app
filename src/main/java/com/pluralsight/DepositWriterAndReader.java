@@ -5,20 +5,10 @@ package com.pluralsight;
 import java.io.*;
 
 public class DepositWriterAndReader {
-    public static void main(String[] args) {
+
+    public static void depositDisplay() {
 
         String yourFile = "src/main/resources/transactions.csv.txt";
-
-        try {
-
-            FileWriter depositWriter = new FileWriter(yourFile, true);
-            depositWriter.write("\n2024-09-26|15:45:12|Direct Deposit|User|400.00");
-            System.out.println("Deposit added!");
-            depositWriter.close();
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
 
         try {
@@ -33,7 +23,6 @@ public class DepositWriterAndReader {
 
                 String[] transSplit = line.split("\\|");
 
-                if (transSplit.length < 5) continue;
                 double depOrPay = Double.parseDouble(transSplit[4]);
 
                 if (depOrPay > 0) {
@@ -44,19 +33,37 @@ public class DepositWriterAndReader {
             }
             dBuffReader.close();
         } catch(FileNotFoundException e) {
-             System.out.println("File not found.");
+             System.out.println("Information not found.");
         } catch (IOException e) {
             System.out.println("ERROR");
         }
 
 
+    }
 
 
+    public static void depositWrite() {
 
+        String yourFile = "src/main/resources/transactions.csv.txt";
+        String userDeposit = "2024-09-26|15:45:12|Direct Deposit|User|400.00";
 
+        try {
 
+            FileWriter depositWriter = new FileWriter(yourFile, true);
+            depositWriter.write("\n" + userDeposit);
+            System.out.println("Deposit added!");
+            depositWriter.close();
 
-
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
+
+
+
+
+
+
+
 }

@@ -6,84 +6,38 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class VendorSearch {
-    public static void main(String[] args) {
+
+    public void searchVendor() {
 
 
         String yourFile = "src/main/resources/transactions.csv.txt";
-        String userInputV = "Ebay";
+        String userVendor = "best buy";
 
         try {
 
-                    FileReader vendorReader = new FileReader(yourFile);
-                    BufferedReader vndrBuffReader = new BufferedReader(vendorReader);
+            FileReader vendorReader = new FileReader(yourFile);
+            BufferedReader vndrBuffReader = new BufferedReader(vendorReader);
 
-                    String discard = vndrBuffReader.readLine();
+            String line = vndrBuffReader.readLine();
+            while (line != null) {
 
-                    String line = vndrBuffReader.readLine();
-                    while (line != null) {
+                String[] transSplitV = line.split("\\|");
 
-                        String[] transSplitV = line.split("\\|");
+                if (transSplitV[3].equalsIgnoreCase(userVendor)) {
+                    System.out.println(line);
 
-                        if (transSplitV.length < 5) continue;
-
-
-                        if (transSplitV[3].equals(userInputV)) {
-                            System.out.println(line);
-
-                        }
-                        line = vndrBuffReader.readLine();
-                    }
-                    vndrBuffReader.close();
+                }
+                line = vndrBuffReader.readLine();
+            }
+            vndrBuffReader.close();
         } catch(FileNotFoundException e) {
-                     System.out.println("File not found.");
+                     System.out.println("Vendor not found.");
         } catch (IOException e) {
                     System.out.println("ERROR");
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }//psvm end
-
-
-
-
-
-
-
-
-
-
-
-
+    }//method end
 
 
 

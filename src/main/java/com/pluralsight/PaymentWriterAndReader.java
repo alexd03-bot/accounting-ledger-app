@@ -3,20 +3,11 @@ package com.pluralsight;
 import java.io.*;
 
 public class PaymentWriterAndReader {
-    public static void main(String[] args) {
+
+    public static void payDisplay() {
 
         String yourFile = "src/main/resources/transactions.csv.txt";
 
-        try {
-
-            FileWriter paymentWriter = new FileWriter(yourFile, true);
-            paymentWriter.write("\n2026-10-26|13:40:00|skateboard|Amazon|-80.00");
-            System.out.println("Payment Added!");
-            paymentWriter.close();
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
 
         try {
 
@@ -25,49 +16,51 @@ public class PaymentWriterAndReader {
 
             String discardP = pBuffReader.readLine();
 
-            String lineP = pBuffReader.readLine();
+            String line = pBuffReader.readLine();
 
-            while (lineP != null) {
+            while (line != null) {
 
-                String[] transSplitP = lineP.split("\\|");
+                String[] transSplitP = line.split("\\|");
 
-                if (transSplitP.length < 5) continue;
                 double depOrPay = Double.parseDouble(transSplitP[4]);
 
                 if (depOrPay < 0) {
-                    System.out.println(lineP);
+                    System.out.println(line);
 
                 }
-                lineP = pBuffReader.readLine();
+                line = pBuffReader.readLine();
             }
             pBuffReader.close();
 
         } catch(FileNotFoundException e) {
-            System.out.println("File not found.");
+            System.out.println("Information not found.");
         } catch (IOException e) {
             System.out.println("ERROR");
         }
 
 
+    }//method end
 
 
 
+    public static void payWrite() {
+
+        String yourFile = "src/main/resources/transactions.csv.txt";
+        String userPay = "2026-10-26|13:40:00|skateboard|Amazon|-80.00";
+
+        try {
+
+            FileWriter paymentWriter = new FileWriter(yourFile, true);
+            paymentWriter.write("\n" + userPay);
+            System.out.println("Payment Added!");
+            paymentWriter.close();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
 
-
-
-
-
-
-    }//psvm end
-
-
-
-
-
-
-
-
+    }
 
 
 
