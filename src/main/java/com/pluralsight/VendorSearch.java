@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class VendorSearch {
 
-    public void searchVendor() {
+    public static void searchVendor() {
 
 
         String yourFile = "src/main/resources/transactions.csv.txt";
