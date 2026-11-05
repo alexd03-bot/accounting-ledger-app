@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Ledger {
     public static void main(String[] args) {
@@ -277,9 +278,10 @@ public class Ledger {
 
     public static void searchVendor() {
 
+        Scanner scanner = new Scanner(System.in);
 
         String yourFile = "src/main/resources/transactions.csv.txt";
-        String userVendor = "best buy";
+        String userVendor = scanner.nextLine();
 
         try {
 

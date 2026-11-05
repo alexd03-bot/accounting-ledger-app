@@ -16,9 +16,9 @@ public class Home {
 
 
         System.out.print("---------------\nWelcome To Your\n  -LEDGExPAL-\n      0v0\n---------------");
-        System.out.println("Please choose an option to get started:" +
-                " 1. Add A Deposit\n" +
-                "2. Make A Payment\n" +
+        System.out.println("Please choose an option to get started:\n" +
+                " 1. Add A Deposit (yyyy-MM-dd|time|description|vendor|amount)\n" +
+                "2. Make A Payment((yyyy-MM-dd|time|description|vendor|amount))\n" +
                 "3. Go To The Ledger Screen\n" +
                 "4. Exit (See you again soon!)");
 
@@ -42,18 +42,18 @@ public class Home {
         Scanner scanner = new Scanner(System.in);
         int done = 0;
         do {
-            String choices = scanner.nextLine();
+            int choices = Integer.parseInt(scanner.nextLine());
 
             switch (choices) {
-                case "1" -> depositWrite();
-                case "2" -> payWrite();
-                case "3" -> ledgerDisplay();
-                case "4" -> done = 1;
+                case 1 -> depositWrite();
+                case 2 -> payWrite();
+                case 3 -> ledgerDisplay();
+                case 4 -> done = 1;
                 default -> System.out.println("Not a valid option. Have a good day!");
 
             }
 
-
+            scanner.nextLine();
             //while close
         } while (done <= 0);//do close
     }
@@ -68,8 +68,9 @@ public class Home {
 
     public static void depositWrite() {
 
+        Scanner scanner = new Scanner(System.in);
         String yourFile = "src/main/resources/transactions.csv.txt";
-        String userDeposit = "2024-09-26|15:45:12|Direct Deposit|User|400.00";
+        String userDeposit = scanner.nextLine();
 
         try {
 
@@ -88,8 +89,9 @@ public class Home {
 
     public static void payWrite() {
 
+        Scanner scanner = new Scanner(System.in);
         String yourFile = "src/main/resources/transactions.csv.txt";
-        String userPay = "2026-10-26|13:40:00|skateboard|Amazon|-80.00";
+        String userPay = scanner.nextLine();
 
         try {
 
@@ -109,7 +111,7 @@ public class Home {
 
     public static void ledgerDisplay() {
 
-        System.out.print("Please choose an option to search or display: " +
+        System.out.print("Please choose an option to search or display: \n" +
                 "1. Display Your All Entries\n" +
                 "2. Display Your Deposits Only\n" +
                 "3. Display Your Payments Only\n" +
@@ -120,19 +122,19 @@ public class Home {
         Scanner scanner = new Scanner(System.in);
         int done = 0;
         do {
-            String ledgerChoices = scanner.nextLine();
+            int ledgerChoices = Integer.parseInt(scanner.nextLine());
 
             switch (ledgerChoices) {
-                case "1" -> Ledger.allDisplay();
-                case "2" -> Ledger.depositDisplay();
-                case "3" -> Ledger.payDisplay();
-                case "4" -> reportsChoices();
-                case "5" -> done = 1;
+                case 1 -> Ledger.allDisplay();
+                case 2 -> Ledger.depositDisplay();
+                case 3 -> Ledger.payDisplay();
+                case 4 -> reportsDisplay();
+                case 5 -> homeOptions();
                 default -> System.out.println("Not a valid option.");
 
             }
 
-
+            scanner.nextLine();
             //while close
         } while (done <= 0);//do close
 
@@ -140,14 +142,38 @@ public class Home {
     }
 
 
-    public static void reportsChoices() {
+    public static void reportsDisplay() {
 
-        System.out.print("Please choose an option to search: " +
+        System.out.print("Please choose an option to search: \n" +
                 "1. Search This Month\n" +
                 "2. Search Last Month\n" +
                 "3. Search This Year\n" +
                 "4. Search Last Year\n" +
-                "5. Find A Vendor");
+                "5. Find A Vendor\n" +
+                "6. Return to Ledger Screen");
+
+
+        Scanner scanner = new Scanner(System.in);
+        int done = 0;
+        do {
+            int reportsChoices = Integer.parseInt(scanner.nextLine());
+
+            switch (reportsChoices) {
+                case 1 -> Ledger.currentMonth();
+                case 2 -> Ledger.currentYear();
+                case 3 -> Ledger.previousMonth();
+                case 4 -> Ledger.previousYear();
+                case 5 -> Ledger.searchVendor();
+                case 6 -> ledgerDisplay();
+                default -> System.out.println("Not a valid option.");
+
+            }
+
+            scanner.nextLine();
+            ledgerDisplay();
+
+            //while close
+        } while (done <= 0);//do close
 
 
     }
