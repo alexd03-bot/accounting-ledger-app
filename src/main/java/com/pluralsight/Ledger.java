@@ -17,7 +17,7 @@ public class Ledger {
 //a-d options for current month, previous month, current year, previous year
 //5. Vendor
 //
-
+    searchVendor();
     }//psvm end
 
 //method for display all
