@@ -18,8 +18,8 @@ public class Home {
         System.out.print("---------------\nWelcome To Your\n  -LEDGExPAL-\n      0v0\n---------------");
         System.out.println("""
                 Please choose an option to get started:
-                 1. Add A Deposit (yyyy-MM-dd|time|description|vendor|amount)
-                2. Make A Payment((yyyy-MM-dd|time|description|vendor|amount))
+                 1. Add A Deposit (yyyy-MM-dd|00:00:00|description|vendor|+amount)
+                2. Make A Payment((yyyy-MM-dd|00:00:00|description|vendor|-amount))
                 3. Go To The Ledger Screen
                 4. Exit (See you again soon!)""");
 
