@@ -16,11 +16,12 @@ public class Home {
 
 
         System.out.print("---------------\nWelcome To Your\n  -LEDGExPAL-\n      0v0\n---------------");
-        System.out.println("Please choose an option to get started:\n" +
-                " 1. Add A Deposit (yyyy-MM-dd|time|description|vendor|amount)\n" +
-                "2. Make A Payment((yyyy-MM-dd|time|description|vendor|amount))\n" +
-                "3. Go To The Ledger Screen\n" +
-                "4. Exit (See you again soon!)");
+        System.out.println("""
+                Please choose an option to get started:
+                 1. Add A Deposit (yyyy-MM-dd|time|description|vendor|amount)
+                2. Make A Payment((yyyy-MM-dd|time|description|vendor|amount))
+                3. Go To The Ledger Screen
+                4. Exit (See you again soon!)""");
 
 
         homeOptions();
@@ -55,7 +56,7 @@ public class Home {
 
             scanner.nextLine();
             //while close
-        } while (done <= 0);//do close
+        } while (done == 0);//do close
     }
 
 
@@ -111,12 +112,13 @@ public class Home {
 
     public static void ledgerDisplay() {
 
-        System.out.print("Please choose an option to search or display: \n" +
-                "1. Display Your All Entries\n" +
-                "2. Display Your Deposits Only\n" +
-                "3. Display Your Payments Only\n" +
-                "4. Your Reports (search by month, year, or vendor)\n" +
-                "5. Return to Home");
+        System.out.print("""
+                Please choose an option to search or display:\s
+                1. Display Your All Entries
+                2. Display Your Deposits Only
+                3. Display Your Payments Only
+                4. Your Reports (search by month, year, or vendor)
+                5. Return to Home""");
 
 
         Scanner scanner = new Scanner(System.in);
@@ -144,13 +146,14 @@ public class Home {
 
     public static void reportsDisplay() {
 
-        System.out.print("Please choose an option to search: \n" +
-                "1. Search This Month\n" +
-                "2. Search Last Month\n" +
-                "3. Search This Year\n" +
-                "4. Search Last Year\n" +
-                "5. Find A Vendor\n" +
-                "6. Return to Ledger Screen");
+        System.out.print("""
+                Please choose an option to search:\s
+                1. Search This Month
+                2. Search Last Month
+                3. Search This Year
+                4. Search Last Year
+                5. Find A Vendor
+                6. Return to Ledger Screen""");
 
 
         Scanner scanner = new Scanner(System.in);

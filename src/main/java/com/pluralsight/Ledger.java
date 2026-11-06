@@ -18,7 +18,7 @@ public class Ledger {
 //a-d options for current month, previous month, current year, previous year
 //5. Vendor
 //
-    searchVendor();
+
     }//psvm end
 
 //method for display all
@@ -149,7 +149,7 @@ public class Ledger {
 
                 String[] dateSplit = transSplitDate[0].split("-");
                 if (dateSplit[0].equals(thisYear) && dateSplit[1].equals(thisMonth)) {
-                    System.out.println(line);
+                    System.out.println();
 
                 }
 
