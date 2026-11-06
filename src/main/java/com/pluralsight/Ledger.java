@@ -149,7 +149,7 @@ public class Ledger {
 
                 String[] dateSplit = transSplitDate[0].split("-");
                 if (dateSplit[0].equals(thisYear) && dateSplit[1].equals(thisMonth)) {
-                    System.out.println();
+                    System.out.println(line);
 
                 }
 
