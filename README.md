@@ -1,7 +1,8 @@
 # Hello! Welcome to my accounting app. It's very simple, but that makes it easy to navigate.
 
 To get started:
-- Just run the program! It won't bite.
+- Just download the code and run the program in IntelliJ!
+
 Enter your payments/deposits, or search reports by date or vendor.
 You could also just see all the information currently stored.
 
@@ -13,5 +14,6 @@ Make sure to enter your information in the provided format when the option in Ho
 it won't show properly (my code is very fr-Agile... get it?)
 
 
-I hope this code is a good jumping-off point to other projects, even without the use of some topics (like DateTimeFormatter)
+I hope this code is a good jumping-off point to other projects, even without the use of some topics (like DateTimeFormatter).
+Unfortunately readability was a big problem which was solved by making the code simpler.
 
