@@ -74,6 +74,7 @@ public class Home {
 
         Scanner scanner = new Scanner(System.in);
         String yourFile = "src/main/resources/transactions.csv.txt";
+        System.out.println("Enter your info:\n");
         String userDeposit = scanner.nextLine();
 
         try {
@@ -95,6 +96,7 @@ public class Home {
 
         Scanner scanner = new Scanner(System.in);
         String yourFile = "src/main/resources/transactions.csv.txt";
+        System.out.println("Enter your info:\n");
         String userPay = scanner.nextLine();
 
         try {

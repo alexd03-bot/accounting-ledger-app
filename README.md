@@ -13,7 +13,11 @@ Sorry :/
 Make sure to enter your information in the provided format when the option in Home comes up. If you want to sort it and your date is in the wrong format, 
 it won't show properly (my code is very fr-Agile... get it?)
 
-
 I hope this code is a good jumping-off point to other projects, even without the use of some topics (like DateTimeFormatter).
 Unfortunately readability was a big problem which was solved by making the code simpler.
+
+###  AGAIN PLEASE FORMAT YOUR ENTRY CORRECTLY 
+
+Code I am most proud of is:
+- The entire project because it was a struggle to get it to run
 
