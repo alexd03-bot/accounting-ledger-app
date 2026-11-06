@@ -50,8 +50,11 @@ public class Home {
                 case 2 -> payWrite();
                 case 3 -> ledgerDisplay();
                 case 4 -> done = 1;
-                default -> System.out.println("Not a valid option. Have a good day!");
+                default -> System.out.println("Not a valid option.");
 
+            }
+            if (done == 1) {
+                System.out.println("Have a good day!");
             }
 
             scanner.nextLine();
